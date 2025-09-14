@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EduSphere</title>
+  <style>
+    /* Reset & Fonts */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to bottom right, #1a1a40, #3a0ca3, #000000);
+      color: #f5f5f5;
+      line-height: 1.6;
+    }
+
+    /* Cover Section */
+    header {
+      position: relative;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      background: url('cover.jpg') center/cover no-repeat;
+      color: white;
+      overflow: hidden;
+    }
+    header::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.6);
+    }
+    header h1 {
+      position: relative;
+      font-size: 4rem;
+      font-weight: 900;
+      z-index: 1;
+      animation: fadeDown 1.2s ease-out;
+      text-shadow: 0 0 20px #6c63ff;
+    }
+    header p {
+      position: relative;
+      margin-top: 1rem;
+      font-size: 1.5rem;
+      font-style: italic;
+      z-index: 1;
+      animation: fadeUp 1.2s ease-out 0.3s forwards;
+      opacity: 0;
+    }
+    header button {
+      position: relative;
+      margin-top: 2rem;
+      padding: 12px 30px;
+      background: #6c63ff;
+      border: none;
+      border-radius: 30px;
+      font-size: 1.1rem;
+      font-weight: bold;
+      cursor: pointer;
+      color: white;
+      z-index: 1;
+      transition: all 0.3s ease-in-out;
+    }
+    header button:hover {
+      background: #5a52d5;
+      transform: scale(1.1);
+      box-shadow: 0 0 20px #6c63ff;
+    }
+
+    /* Team Section */
+    section {
+      padding: 4rem 2rem;
+      max-width: 1000px;
+      margin: auto;
+      text-align: center;
+    }
+    section h2 {
+      font-size: 2.5rem;
+      margin-bottom: 2rem;
+      color: #a0c4ff;
+      text-shadow: 0 0 10px #6c63ff;
+    }
+    .team {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem;
+    }
+    .card {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 15px;
+      padding: 2rem 1rem;
+      backdrop-filter: blur(10px);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+    }
+    .card:hover {
+      transform: translateY(-10px) scale(1.05);
+      box-shadow: 0 10px 25px rgba(108,99,255,0.6);
+    }
+    .card h3 {
+      font-size: 1.2rem;
+      color: #89c2d9;
+    }
+    .card p {
+      margin-top: 0.5rem;
+      font-size: 1.1rem;
+      font-weight: bold;
+    }
+
+    /* Animations */
+    @keyframes fadeDown {
+      from {opacity: 0; transform: translateY(-40px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+    @keyframes fadeUp {
+      from {opacity: 0; transform: translateY(40px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.9rem;
+      background: #0a0a23;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Cover Section -->
+  <header>
+    <h1>EduSphere</h1>
+    <p>Connect, Learn and Share</p>
+    <button onclick="window.location.href='about.html'">
+	About Me
+	</button>
+  </header>
+
+  <!-- Team Section -->
+  <section>
+    <h2>Team FinDevs</h2>
+    <div class="team">
+      <div class="card">
+        <h3>Developer</h3>
+        <p>Muhammad Usama Younis</p>
+      </div>
+      <div class="card">
+        <h3>Documentation</h3>
+        <p>Salma</p>
+      </div>
+      <div class="card">
+        <h3>Researcher</h3>
+        <p>Mercy</p>
+      </div>
+      <div class="card">
+        <h3>Researcher</h3>
+        <p>Talha</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 EduSphere | Built by Team FinDevs
+  </footer>
+
+</body>
+</html>
